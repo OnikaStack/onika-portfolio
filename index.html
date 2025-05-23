@@ -6,10 +6,33 @@
   <title>Onika Javu - Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a2e0a1e6e4.js" crossorigin="anonymous"></script>
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .transition-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .transition-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    }
+  </style>
 </head>
-<body class="bg-yellow-50 text-gray-900 font-sans">
-  <header class="bg-yellow-400 shadow-lg p-6 text-center">
-    <h1 class="text-5xl font-extrabold text-gray-900">Onika Javu</h1>
+<body class="bg-yellow-50 text-gray-900 font-sans leading-relaxed">
+  <header class="bg-yellow-400 shadow-lg p-6 text-center fade-in">
+    <h1 class="text-5xl font-extrabold">Onika Javu</h1>
     <p class="text-lg font-medium mt-2">Software Developer | Technical Tutor | Data Enthusiast</p>
     <div class="mt-4 space-x-5 text-xl">
       <a href="mailto:eduv4861489@vossie.net" class="text-gray-800 hover:text-white"><i class="fas fa-envelope"></i></a>
@@ -21,15 +44,15 @@
 
   <main class="max-w-6xl mx-auto px-6 py-12 space-y-14">
     <!-- About -->
-    <section>
+    <section class="fade-in">
       <h2 class="text-3xl font-bold text-yellow-600 mb-3">About Me</h2>
-      <p class="text-lg leading-relaxed">
-        I'm a 3rd year Computer Science student and a driven, solution-oriented developer with practical experience in tutoring and building web tools. I bring strong problem-solving skills, a passion for continuous learning, and a solid foundation in full-stack development. I'm ready to contribute to real-world projects and join teams building impactful software.
+      <p class="text-lg">
+        I'm a 3rd year Computer Science student with a strong focus on practical development and real-world application of skills. I’ve gained experience tutoring technical subjects, working on software projects, and I'm actively pursuing opportunities to join professional teams as a full-time developer. My mission is to build solutions that are both functional and user-centered.
       </p>
     </section>
 
     <!-- Skills -->
-    <section>
+    <section class="fade-in">
       <h2 class="text-3xl font-bold text-yellow-600 mb-3">Skills</h2>
       <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-center text-sm font-medium">
         <span class="bg-white py-3 px-4 rounded shadow">Python</span>
@@ -45,41 +68,42 @@
     </section>
 
     <!-- Experience -->
-    <section>
+    <section class="fade-in">
       <h2 class="text-3xl font-bold text-yellow-600 mb-3">Experience</h2>
-      <div class="bg-white p-6 rounded shadow border-l-4 border-yellow-400">
+      <div class="bg-white p-6 rounded shadow border-l-4 border-yellow-400 transition-card">
         <h3 class="text-xl font-semibold">Technical Tutor — Tutor Doctor</h3>
         <p class="text-sm text-gray-500">Subjects: Programming, SQL, Mathematics</p>
         <p class="mt-2">Guided students of all ages in developing strong programming fundamentals, analytical thinking, and confidence with technical concepts.</p>
       </div>
     </section>
 
-    <!-- Career Goals -->
-    <section>
-      <h2 class="text-3xl font-bold text-yellow-600 mb-3">Career Goals</h2>
-      <p class="text-lg">
-        I'm currently seeking opportunities as a Software Developer, Full Stack or Frontend/Backend Engineer, or Data Analyst. I aim to be part of a forward-thinking team, building intuitive and efficient tools for real-world use.
-      </p>
-    </section>
-
     <!-- Projects -->
-    <section>
+    <section class="fade-in">
       <h2 class="text-3xl font-bold text-yellow-600 mb-3">Projects</h2>
-      <p class="text-gray-700 italic mb-2">Showcasing practical skills through meaningful work.</p>
-      <ul class="list-disc pl-6 text-gray-800 space-y-1">
-        <li>Project 1 – <span class="italic text-gray-500">Add description here</span></li>
-        <li>Project 2 – <span class="italic text-gray-500">Add description here</span></li>
-      </ul>
+      <div class="space-y-6">
+        <div class="bg-white p-6 rounded shadow transition-card">
+          <h3 class="text-xl font-semibold">Course Registration System (BSc Project)</h3>
+          <p>A web-based platform that allows students to register for courses, view schedules, and manage profiles. Built using React and Node.js.</p>
+        </div>
+        <div class="bg-white p-6 rounded shadow transition-card">
+          <h3 class="text-xl font-semibold">Data Visualizer for Student Performance (BSc Project)</h3>
+          <p>Analyzed and visualized academic records using Python (Pandas, Matplotlib) to help departments identify performance trends.</p>
+        </div>
+        <div class="bg-white p-6 rounded shadow transition-card">
+          <h3 class="text-xl font-semibold">Self-Watering Plant System</h3>
+          <p>Built an Arduino-based IoT system that automatically waters plants based on soil moisture levels. Integrated with a web dashboard to monitor metrics in real-time.</p>
+        </div>
+      </div>
     </section>
 
     <!-- Resume -->
-    <section>
+    <section class="fade-in">
       <h2 class="text-3xl font-bold text-yellow-600 mb-3">Resume</h2>
       <img src="cv-preview.jpg" alt="Onika Javu CV Preview" class="w-full max-w-3xl mx-auto rounded shadow" />
     </section>
 
     <!-- Contact -->
-    <section>
+    <section class="fade-in">
       <h2 class="text-3xl font-bold text-yellow-600 mb-3">Contact</h2>
       <p>Email: <a href="mailto:eduv4861489@vossie.net" class="underline text-gray-700">eduv4861489@vossie.net</a></p>
       <p>WhatsApp: <a href="https://wa.me/27696547988" class="underline text-gray-700">069 654 7988</a></p>
@@ -87,5 +111,8 @@
     </section>
   </main>
 
-  <footer class="bg-yellow-400 text-center text-sm text-gray-900 p-4 mt-10 shadow-inner f
- 
+  <footer class="bg-yellow-400 text-center text-sm text-gray-900 p-4 mt-10 shadow-inner font-medium">
+    &copy; 2025 Onika Javu. All rights reserved.
+  </footer>
+</body>
+</html>
